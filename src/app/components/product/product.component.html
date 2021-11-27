@@ -1,10 +1,30 @@
 <table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Category ID</th>
+      <!-- Kategori ID -->
+      <th>Product Name</th>
+      <!-- Ürün Adı -->
+      <th>Unit Price</th>
+      <!-- Birim Fiyatı -->
+      <th>Units In Stock</th>
+      <!-- Stok Adedi -->
+    </tr>
+  </thead>
   <tbody>
     <tr *ngFor="let product of products">
-      <td>{{product.id}}</td>
+      <td>{{product.productId}}</td>
       <td>{{product.categoryId}}</td>
-      <td>{{product.name}}</td>
+      <td>{{product.productName}}</td>
       <td>{{product.unitPrice}}</td>
+      <td>{{product.unitsInStock}}</td>
     </tr>
   </tbody>
 </table>
+
+<div *ngIf="!dataLoaded" class="text-center">
+  <div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
