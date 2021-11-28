@@ -12,7 +12,7 @@
       <!-- Stok Adedi -->
     </tr>
   </thead>
-  <tbody>
+  <tbody *ngIf="dataLoaded">
     <tr *ngFor="let product of products">
       <td>{{product.productId}}</td>
       <td>{{product.categoryId}}</td>
