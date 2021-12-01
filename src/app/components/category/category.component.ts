@@ -30,7 +30,7 @@ export class CategoryComponent implements OnInit {
   }
 
   getActiveClassIfEqualsCurrentCategory(category: Category) {
-    if (category == this.currentCategory) {
+    if (category === this.currentCategory) {
       return "active";
     } else {
       return "";
@@ -38,7 +38,7 @@ export class CategoryComponent implements OnInit {
   }
 
   getActiveClassIfNoCurrentCategory() {
-    if (this.identityCategory == this.currentCategory) {
+    if (this.identityCategory === this.currentCategory) {
       return "active";
     } else {
       return "";
