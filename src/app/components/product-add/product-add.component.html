@@ -1,0 +1,22 @@
+<h1 class="display-6 mb-3">Add product</h1>
+
+<form [formGroup]="productAddForm">
+  <div class="mb-2">
+    <label for="productName" class="form-label">Product name</label>
+    <input type="text" id="productName" formControlName="productName" class="form-control">
+  </div>
+  <div class="mb-2">
+    <label for="categoryId" class="form-label">Category ID</label>
+    <input type="number" id="categoryId" formControlName="categoryId" class="form-control">
+  </div>
+  <div class="mb-2">
+    <label for="unitsInStock" class="form-label">Units in stock</label>
+    <input type="number" id="unitsInStock" formControlName="unitsInStock" class="form-control">
+  </div>
+  <div class="mb-2">
+    <label for="unitPrice" class="form-label">Unit price</label>
+    <input type="number" id="unitPrice" formControlName="unitPrice" class="form-control">
+  </div>
+</form>
+
+<button (click)="addProduct()" class="btn btn-primary">Add</button>
