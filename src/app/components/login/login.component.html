@@ -1,0 +1,37 @@
+<body class="text-center">
+  <main class="form-signin">
+    <form [formGroup]="loginForm">
+      <h1 class="h3 mb-3 fw-normal">Login</h1>
+
+      <div class="form-floating">
+        <input
+          type="email"
+          formControlName="email"
+          class="form-control"
+          id="email"
+          placeholder="E-mail address"
+        />
+        <label for="email">E-mail address</label>
+      </div>
+      <div class="form-floating">
+        <input
+          type="password"
+          formControlName="password"
+          class="form-control"
+          id="password"
+          placeholder="Password"
+        />
+        <label for="password">Password</label>
+      </div>
+
+      <!-- <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me" /> Remember me
+        </label>
+      </div> -->
+      <button (click)="login()" class="w-100 btn btn-lg btn-primary" type="button">
+        Login
+      </button>
+    </form>
+  </main>
+</body>
